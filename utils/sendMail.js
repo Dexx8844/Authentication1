@@ -1,10 +1,11 @@
+require('dotenv').config();
 const nodeMailer = require('nodemailer');
 
 const sendMail = async ( options )=>{``
   
     const transporter = await nodeMailer.createTransport({
         host: process.env.EMAIL_HOST,
-        service: process.env.EMAIL_SERVICE,
+        service: process.env.SERVICE,
         port: 465,
 
         secure: true, // true for port 465, false for other ports
@@ -20,7 +21,7 @@ const sendMail = async ( options )=>{``
       async function main() {
         // send mail with defined transport object
         const info = await transporter.sendMail({
-          from: `"Fred Foo 👻" <${process.env.APP.USERNAME}>`, // sender address
+          from: `" chidera" <${process.env.APP.USERNAME}>`, // sender address
           to: options.email, // list of receivers
           subject: options.subject, // Subject line
           html: options.html, // html body
@@ -31,7 +32,7 @@ const sendMail = async ( options )=>{``
 
 
       const mailOption = {
-        subject: options.subject, text:options.text, from:"obusco4lyfe@gmail.com", to: options.email, html:options.html
+        subject: options.subject, text:options.text, from:"chideraaslem@gmail.com", to: options.email, html:options.html
       };
       await transporter.sendMail(mailOption)
 
