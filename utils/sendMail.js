@@ -9,8 +9,8 @@ const sendMail = async ( options )=>{``
 
         secure: true, // true for port 465, false for other ports
         auth: {
-          user: "obusco4lyfe@gmail.com",
-          pass: "nugn xilt pwbv arse"
+           user: process.env.APP_USERNAME,
+          pass: process.env.APP_PASSWORD
         },
         // tls: {
         //     rejectUnauthorized: false, // Bypass SSL verification
