@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 // app.use(cors({ origin: "*", methods: "GET,HEAD,PUT,PATCH,POST,DELETE" }));
 app.use(cors({
-  origin: ['http://localhost:4343', 'https://authentication1-7gd1.onrender.com'], // Allow both dev and production servers
+  origin: ['http://localhost:4343', 'https://authentication1-2b5m.onrender.com'], // Allow both dev and production servers
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true // This allows cookies & session handling
 }));
@@ -43,7 +43,7 @@ const swaggerDefinition = {
       description:
         'This is the first swagger documentation i have ever done',
       license: {
-        name:'Base_URL: https://authentication1-7gd1.onrender.com',
+        name:'Base_URL: https://authentication1-2b5m.onrender.com',
         // url: 'https://spdx.org/licenses/MIT.html',
       },
       contact: {
@@ -67,7 +67,7 @@ const swaggerDefinition = {
     //Two urls in the server object, one is the development server and the other is the production server
     servers: [
         {
-            url: 'https://authentication1-7gd1.onrender.com',
+            url: 'https://authentication1-2b5m.onrender.com',
             description: 'Production server',
           },
       {
